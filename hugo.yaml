@@ -1,3 +1,88 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: "https://xyl0982.github.io/" # 主站的 URL
+title: "\U0001F345 Xingyu's World \U0001F95A" # 站点标题
+copyright: "[©2023 Xingyu's World](https://xyl0982.github.io/)" # 网站的版权声明，通常显示在页脚
+theme: PaperMod # 主题
+languageCode: en-GB # 语言
+
+enableInlineShortcodes: true # shortcode，类似于模板变量，可以在写 markdown 的时候便捷地插入，官方文档中有一个视频讲的很通俗
+hasCJKLanguage: true # 是否有 CJK 的字符
+enableRobotsTXT: true # 允许生成 robots.txt
+buildDrafts: false # 构建时是否包括草稿
+buildFuture: false # 构建未来发布的内容
+buildExpired: false # 构建过期的内容
+enableEmoji: true # 允许 emoji
+pygmentsUseClasses: true
+defaultContentLanguage: en # 顶部首先展示的语言界面
+defaultContentLanguageInSubdir: false # 是否要在地址栏加上默认的语言代码
+
+
+
+languages:
+  en:
+    languageName: "English" # 展示的语言名
+    weight: 1 # 权重
+    taxonomies: # 分类系统
+      category: categories
+      tag: tags
+    # https://gohugo.io/content-management/menus/#define-in-site-configuration
+    menus:
+      main:
+        - name: Home Page
+          pageRef: /
+          weight: 4 # 控制在页面上展示的前后顺序
+        - name: Archives
+          pageRef: archives/
+          weight: 5
+        - name: Categories
+          pageRef: categories/
+          weight: 10
+        - name: Tags
+          pageRef: tags/
+          weight: 10
+        - name: Search
+          pageRef: search/
+          weight: 20
+        - name: About
+          pageRef: about/
+          weight: 21
+
+#~~~~~~~~~~~~~~~~~~
+#配置主题
+#~~~~~~~~~~~~~~~~~~
+pagerSize: 8 #每页展示的文章数量
+
+params:
+  env: production
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author: Xingyu Liu
+  defaultTheme: light
+  ShowShareButtons: true #关闭分享按钮
+  ShowReadingTime: true #展示阅读时长
+
+
+  homeInfoParams:
+    Title: "Hi, there \U0001F44B"
+    Content:  This is a space where I share life moments, personal interests, and learning insights. From reflective thoughts and practical tips to fascinating discoveries along the way, I hope these posts bring you inspiration and connection. Thank you for visiting, and I look forward to growing together with you!
+
+  socialIcons: # optional
+    - name: "github"
+      title: "Follow my Github"
+      url: "https://github.com/xyl0982"
+#搜索
+fuseOpts:
+      isCaseSensitive: false # 是否大小写敏感
+      shouldSort: true # 是否排序
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+      keys: ["title", "permalink", "summary", "content"]
+      includeMatches: true    
+      
+
+outputs:
+  home:
+    - HTML # 生成的静态页面
+    - RSS # 这个其实无所谓
+    - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
