@@ -4,4 +4,4 @@ title: 'Some interesting math paradoxes'
 tags: ["Math", "Life"]
 categories: ["Applied Math"]
 ---
-# 
+# Monty Hall Problem
