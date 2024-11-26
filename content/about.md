@@ -24,4 +24,5 @@ Through this blog, I hope to:
 - Document my growth as a student and thinker.  
 - Foster a space for discussion and collaboration with readers.  
 
-Whether you are a fellow enthusiast or just curious about mathematics, I invite you to join me in exploring this fascinating subject. Feel free to share your thoughts or reach out anytime!  
+Whether you are a fellow enthusiast or just curious about mathematics, I invite you to join me in exploring this fascinating subject. Feel free to share your thoughts or reach out anytime!
+
